@@ -1,0 +1,11 @@
+# Were your predictions right?
+Two out of three. I correctly predicted the tie between Wednesday and Thursday for most screen time (8 hours each), and Wednesday for best focus day (10/10). My caffeine prediction was the messy one. The data showed average focus actually rising with caffeine (7.0 with no cups, 7.4 with one, 9.0 with two), but I only had a single zero-cup day and a single two-cup day, making my caffeine prediction looking right on the surface, but the sample size makes it shaky.
+
+# What surprised you?
+Wednesday surprised me most. It was my best focus day (10/10) and one of my highest screen time days (8 hours), which broke my assumption that more screen time automatically means worse focus. It suggests sleep (7 hours that night) mattered more than screen time. Friday was the other surprise, it had the same sleep and caffeine as Monday, but my focus dropped to a 5, so something the data doesn't capture (like end-of-week fatigue) was probably the reason.
+
+# What was tricky or rewarding?
+The trickiest part was handling ties in findHighestScreenTime(), a "find the max" loop would have silently reported only one of the two 8-hour days, so I had to add a filter step to catch every day matching the max. The most rewarding was correlateCaffeineToFocus(), where I learned to group data into buckets using an object and average within each group. Seeing the same two patterns (find-the-max and the accumulator) reappear across functions made the code start to feel like a toolkit rather than one-off scripts.
+
+# How did using your own data change things?
+It made the results mean something. With made-up numbers I would have just checked that the code ran; with my real week, I actually cared what the output said, and I found myself questioning the data itself, like whether one 2-cup day can tell me anything about caffeine. It also taught me a real lesson about data analysis: my code worked perfectly, but the conclusions were only as trustworthy as the sample behind them.
